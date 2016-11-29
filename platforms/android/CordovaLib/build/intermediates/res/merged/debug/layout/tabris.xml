@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright(c) 2012 EclipseSource. All Rights Reserved. -->
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ui_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.eclipsesource.tabris.android.internal.toolkit.DeveloperConsoleDrawer
+        android:id="@+id/developer_console_drawer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/content_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                style="?attr/mainToolbarStyle"
+                android:theme="?attr/mainToolbarTheme"
+                app:popupTheme="?attr/mainToolbarPopupTheme">
+
+                <ImageView
+                    android:id="@+id/main_toolbar_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp" />
+            </android.support.v7.widget.Toolbar>
+
+            <com.eclipsesource.tabris.android.internal.toolkit.view.Display
+                android:id="@+id/display"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:focusableInTouchMode="true" />
+
+        </LinearLayout>
+
+        <com.eclipsesource.tabris.android.internal.toolkit.DeveloperConsoleView
+            android:id="@+id/developer_console"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="?android:attr/windowBackground" />
+
+    </com.eclipsesource.tabris.android.internal.toolkit.DeveloperConsoleDrawer>
+
+    <com.eclipsesource.tabris.android.internal.toolkit.view.UIDrawer
+        android:id="@+id/ui_drawer"
+        android:layout_height="match_parent"
+        android:layout_width="240dp"
+        android:layout_gravity="start"
+        android:clickable="true"
+        android:background="?android:attr/windowBackground" />
+
+</android.support.v4.widget.DrawerLayout>

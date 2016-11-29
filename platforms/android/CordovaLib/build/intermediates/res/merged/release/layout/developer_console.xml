@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/developer_console_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:text="Dev console"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="@dimen/developer_console_padding_horizontal"
+            android:textColor="?android:attr/textColorSecondary"
+            style="?android:attr/textAppearanceMedium"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/developer_console_action_home"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_home_holo_light"
+            android:scaleType="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_weight="0" />
+
+        <ImageView
+            android:id="@+id/developer_console_action_restart_app"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_app_restart_holo_light"
+            android:scaleType="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_weight="0" />
+
+        <ImageView
+            android:id="@+id/developer_console_action_overflow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_overflow_holo_light"
+            android:scaleType="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_weight="0" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/developer_console_toolbar_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/developer_console_toolbar"
+        android:background="#ddd" />
+
+    <ImageView
+        android:id="@+id/developer_console_input_submit"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/developer_console_submit"
+        android:alpha="0.4"
+        android:contentDescription="Evaluate script" />
+
+    <EditText
+        android:id="@+id/developer_console_input_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:paddingBottom="15dp"
+        android:layout_toLeftOf="@id/developer_console_input_submit"
+        android:layout_toStartOf="@id/developer_console_input_submit"
+        android:layout_alignParentBottom="true"
+        android:hint="Evaluate script..."
+        android:textSize="16dp"
+        android:typeface="monospace"
+        android:inputType="textVisiblePassword"
+        android:imeOptions="actionDone" />
+
+    <View
+        android:id="@+id/developer_console_input_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/developer_console_input_submit"
+        android:background="#ddd" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/developer_console_log"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/developer_console_toolbar_separator"
+        android:layout_above="@id/developer_console_input_separator"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>

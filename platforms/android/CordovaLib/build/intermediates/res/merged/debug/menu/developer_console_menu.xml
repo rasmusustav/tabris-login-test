@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/developer_console_action_filter_log"
+        android:title="Filter log" />
+    <item
+        android:id="@+id/developer_console_action_clear_log"
+        android:title="Clear log" />
+    <item
+        android:id="@+id/developer_console_action_share_log"
+        android:title="Share log…" />
+</menu>

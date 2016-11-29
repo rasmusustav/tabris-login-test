@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="reference" name="groupSeparatorColor"/>
+    <attr format="reference" name="groupTitleTextColor"/>
+    <attr format="reference" name="mainToolbarBackNavigationIcon"/>
+    <attr format="reference" name="mainToolbarMenuNavigationIcon"/>
+    <attr format="reference" name="mainToolbarPopupTheme"/>
+    <attr format="reference" name="mainToolbarStyle"/>
+    <attr format="reference" name="mainToolbarTheme"/>
+    <attr format="reference" name="navigationDrawerIcon"/>
+    <attr format="dimension" name="searchResultListItemHeight"/>
+    <attr format="reference" name="searchViewEditQuery"/>
+    <attr format="reference" name="searchViewEditQueryBackground"/>
+    <attr format="reference" name="searchViewTheme"/>
+    <attr format="reference" name="toolbarBackground"/>
+    <attr format="reference" name="toolbarSeparatorGradient"/>
+    <attr format="reference" name="windowAnimationModalBackgroundStyle"/>
+    <attr format="reference" name="windowAnimationModalStyle"/>
+    <color name="black">#ff000000</color>
+    <color name="developer_console_log_level_debug">#1976d2</color>
+    <color name="developer_console_log_level_error">#f44336</color>
+    <color name="group_separator_color_dark">#ff707070</color>
+    <color name="group_separator_color_light">#ffa9a9a9</color>
+    <color name="group_title_text_color_dark">#ffcccccc</color>
+    <color name="group_title_text_color_light">#ff999999</color>
+    <color name="white">#ffffffff</color>
+    <dimen name="alert_dialog_title_height">64dip</dimen>
+    <dimen name="developer_console_padding_horizontal">8dp</dimen>
+    <dimen name="edit_text_inset_bottom_material">7dp</dimen>
+    <dimen name="edit_text_inset_top_material">10dp</dimen>
+    <item name="animating" type="id"/>
+    <item name="bounds" type="id"/>
+    <item name="custom_data" type="id"/>
+    <item name="image_view_current_target" type="id"/>
+    <item name="markup_enabled" type="id"/>
+    <item name="menu_id" type="id"/>
+    <item name="original_text" type="id"/>
+    <item name="text_input_keyboard" type="id"/>
+    <string name="dialog_error_button_close">Close</string>
+    <string name="dialog_error_button_retry">Retry</string>
+    <string name="dialog_unexpected_error_occurred">"An unexpected error occurred: "</string>
+    <string name="library_name">Tabris</string>
+    <style name="Tabris.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:background">@drawable/edit_text_background</item>
+    </style>
+    <style name="Tabris.Spinner" parent="Widget.AppCompat.Spinner.Underlined">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:background">@drawable/spinner_background</item>
+    </style>
+    <style name="Tabris.SpinnerItem" parent="Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+    </style>
+    <style name="Tabris.Toolbar.Dark" parent="ThemeOverlay.AppCompat.Dark"/>
+    <style name="Tabris.Toolbar.Light" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="Tabris.Toolbar.Popup.Dark" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:background">@null</item>
+    </style>
+    <style name="Tabris.Toolbar.Popup.Light" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@null</item>
+    </style>
+    <style name="Tabris.Toolbar.Style" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">?colorPrimary</item>
+    </style>
+    <style name="Theme.Tabris" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">#37474F</item>
+        <item name="colorPrimaryDark">#263238</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="mainToolbarStyle">@style/Tabris.Toolbar.Style</item>
+        <item name="mainToolbarTheme">@style/Tabris.Toolbar.Dark</item>
+        <item name="mainToolbarPopupTheme">@style/Tabris.Toolbar.Popup.Dark</item>
+        <item name="mainToolbarMenuNavigationIcon">@drawable/ic_menu_white</item>
+        <item name="mainToolbarBackNavigationIcon">@drawable/ic_arrow_back_white</item>
+
+        <!-- SearchView -->
+        <item name="searchViewTheme">@style/Tabris.Toolbar.Dark</item>
+        <item name="searchViewEditQuery">@drawable/ic_search_query_edit_dark</item>
+
+        <!-- Spinner -->
+        <item name="android:spinnerStyle">@style/Tabris.Spinner</item>
+        <item name="android:spinnerItemStyle">@style/Tabris.SpinnerItem</item>
+
+        <!-- EditText -->
+        <item name="editTextStyle">@style/Tabris.EditText</item>
+        <item name="android:editTextBackground">@drawable/edit_text_background</item>
+
+    </style>
+    <style name="Theme.Tabris.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#B0BEC5</item>
+        <item name="colorPrimaryDark">#90A4AE</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="mainToolbarStyle">@style/Tabris.Toolbar.Style</item>
+        <item name="mainToolbarTheme">@style/Tabris.Toolbar.Light</item>
+        <item name="mainToolbarPopupTheme">@style/Tabris.Toolbar.Popup.Light</item>
+        <item name="mainToolbarMenuNavigationIcon">@drawable/ic_menu_black</item>
+        <item name="mainToolbarBackNavigationIcon">@drawable/ic_arrow_back_black</item>
+
+        <!-- SearchView -->
+        <item name="searchViewTheme">@style/Tabris.Toolbar.Light</item>
+        <item name="searchViewEditQuery">@drawable/ic_search_query_edit_light</item>
+
+        <!-- Spinner -->
+        <item name="android:spinnerStyle">@style/Tabris.Spinner</item>
+        <item name="android:spinnerItemStyle">@style/Tabris.SpinnerItem</item>
+
+        <!-- EditText -->
+        <item name="editTextStyle">@style/Tabris.EditText</item>
+        <item name="android:editTextBackground">@drawable/edit_text_background</item>
+
+    </style>
+    <style name="Theme.Tabris.Light.DarkActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#37474F</item>
+        <item name="colorPrimaryDark">#263238</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="mainToolbarStyle">@style/Tabris.Toolbar.Style</item>
+        <item name="mainToolbarTheme">@style/Tabris.Toolbar.Dark</item>
+        <item name="mainToolbarPopupTheme">@style/Tabris.Toolbar.Popup.Light</item>
+        <item name="mainToolbarMenuNavigationIcon">@drawable/ic_menu_white</item>
+        <item name="mainToolbarBackNavigationIcon">@drawable/ic_arrow_back_white</item>
+
+        <!-- SearchView -->
+        <item name="searchViewTheme">@style/Tabris.Toolbar.Dark</item>
+        <item name="searchViewEditQuery">@drawable/ic_search_query_edit_light</item>
+
+        <!-- Spinner -->
+        <item name="android:spinnerStyle">@style/Tabris.Spinner</item>
+        <item name="android:spinnerItemStyle">@style/Tabris.SpinnerItem</item>
+
+        <!-- EditText -->
+        <item name="editTextStyle">@style/Tabris.EditText</item>
+        <item name="android:editTextBackground">@drawable/edit_text_background</item>
+
+    </style>
+</resources>
